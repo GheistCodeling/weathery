@@ -1,21 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {BrowserRouter as Router, Switch,  Route} from 'react-router-dom';
-import Axios from 'axios';
 import Navbar from './components/Navbar';
+import FetchForecasts from './components/FetchForecasts';
 import './App.css';
 
-function App() {
-  return (
-    <>
-    <Router>
+class App  extends Component { 
 
-      <Navbar />
-      <Switch>
-        <Route path="/" exact />
-      </Switch>
-    </Router>
-    </>
-  );
-}
+  render() {
+        return (
+          <>
+            <Router>
+              <Navbar />
+              <FetchForecasts />
+              <Switch>
+                <Route path="/" exact />
+              </Switch>
+            </Router>
+          </>
+      );
+    }
+  }
 
 export default App;

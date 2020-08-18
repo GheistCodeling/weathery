@@ -5,14 +5,15 @@ body {
 }
 
 .navbar {
-    position: sticky;
+    position: absolute;
     display: flex;
     top: 0;
     height: 60px;
+    width: 100vw;
     justify-content: center;
     align-items: center;
     font-size: 15px;
-    background: #e2e2e2;
+    background: #222C40;
     z-index: 999999;
   }
 
