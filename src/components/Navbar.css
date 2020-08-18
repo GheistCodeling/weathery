@@ -1,0 +1,33 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: sticky;
+    display: flex;
+    top: 0;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    background: #e2e2e2;
+    z-index: 999999;
+  }
+
+  .navbar__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    max-width: 1500px;
+  }
+  
+  .brand {
+    display: flex;
+    color: #fff;
+    font-size: 40px;
+    text-decoration: none;
+    cursor: pointer;
+  }
