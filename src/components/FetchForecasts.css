@@ -6,6 +6,13 @@
     background: #4597a8;
 }
 
+.forecast__form {
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .forecast__inner {
     position: absolute;
     display: flex;
