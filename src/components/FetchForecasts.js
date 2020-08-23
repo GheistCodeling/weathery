@@ -1,12 +1,18 @@
 import React from 'react';
-import './FetchForecasts.css'
+import './FetchForecasts.css';
+import ForecastItem from './ForecastItem';
 import axios from 'axios';
 
 export default class FetchForecasts extends React.Component {
-  state = {
-    forecasts: [],
-    city: 'Hamburg'
+  constructor(props)  {
+    super(props);
+    this.state = {
+      forecasts: [],
+      city: 'Hamburg',
+      icon: []
+    }
   }
+
   handleSubmit(e) {
     
     if(this.refs.city.value === '') {
@@ -32,13 +38,14 @@ export default class FetchForecasts extends React.Component {
         
         for(let i = 0; i < list.length; i += 8) {
           forecasts.push(list[i]);
+          
         }
-        console.log(forecasts);
+       
         this.setState({ forecasts });
       })
   }
   componentDidMount() {
-    if(this.city != 'undefined') {
+    if(this.city !== 'undefined') {
       this.fetchWeather();
     }
   }
@@ -46,7 +53,6 @@ export default class FetchForecasts extends React.Component {
   render() {
     return (
       <>
-      
       <div className="forecast__wrapper">
       <div className="forecast__form">
         <form onSubmit={this.handleSubmit.bind(this)}>
@@ -55,15 +61,9 @@ export default class FetchForecasts extends React.Component {
         </form>
         <h1>{this.state.city}</h1>
       </div>
-        <div className="forecast__inner">
+        <div className="forecast__inner row">
         
-          { this.state.forecasts.map(forecast => 
-          <div className="forecast__item" key={forecast.main.feels_like}>
-            <p>{forecast.dt_txt}</p>
-            <span><img src={`http://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`} />
-              {forecast.main.feels_like} °C
-            </span>
-          </div>)}
+          <ForecastItem {...this.state} />
         </div>
     </div>
     </>
