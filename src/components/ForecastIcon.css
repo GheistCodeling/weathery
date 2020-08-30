@@ -1,0 +1,4 @@
+.forecast__item img {
+    width: 50%;
+    object-fit: contain;
+}

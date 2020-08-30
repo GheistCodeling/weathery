@@ -1,9 +1,31 @@
 .forecast__item {
     width: 20vw;
     height: 100%;
+    margin: 0 5px;
     padding: 2vh 2vw;
     font-size: 2em;
     font-weight: 700;
     color: #fff;
     text-align: center;
+    background: #272829;
+    cursor: pointer;
+}
+.forecast__item p{
+    font-size: 15px;
+}
+
+.forecast__item .inner {
+    position: relative;
+    display: flex;
+}
+
+.forecast__item .inner p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+.forecast__item .inner p span{
+    font-size: 15px;
+    margin: 0 5px;
 }

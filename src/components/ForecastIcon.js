@@ -1,5 +1,5 @@
 import React from 'react';
-import './ForecastItem.css';
+import './ForecastIcon.css';
 
 export default class ForecastItem extends React.Component {
 
@@ -11,7 +11,7 @@ export default class ForecastItem extends React.Component {
     return (
       <>
         
-         <img src={`http://openweathermap.org/img/wn/${this.props.icon}.png`} />
+         <img src={`http://openweathermap.org/img/wn/${this.props.icon}@2x.png`} alt={this.props.description} />
     </>
     )
   }
